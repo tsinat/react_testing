@@ -19,17 +19,18 @@ describe('CommentBox', () => {
         expect(component.find('button')).to.exist;
     });
 
-    discribe('entering some text', () => {
+    describe('entering some text', () => {
 
         beforeEach(() => {
             component.find('textarea').simulate('change', 'new comment');
         });
 
         it('shows text in the text area', () => {
-
+            expect(component.find('textarea')).to.have.value('new comment');
         });
         it('when submited, clears the input', () => {
-
+            component.simulate('submit');
+            expect(component.find('textarea')).to.have.value('');
         });
     });
 });
