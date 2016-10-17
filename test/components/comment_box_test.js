@@ -32,5 +32,6 @@ describe('CommentBox', () => {
             component.simulate('submit');
             expect(component.find('textarea')).to.have.value('');
         });
+        
     });
 });
