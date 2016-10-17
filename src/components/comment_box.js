@@ -25,6 +25,7 @@ class CommentBox extends Component {
             </form >
         );
     }
+    
 }
 
 export default CommentBox;
