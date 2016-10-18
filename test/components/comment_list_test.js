@@ -5,11 +5,12 @@ describe('CommentList', () => {
     let component;
 
     beforeEach(() => {
-        component = renderComponent(CommentList, null, { comments: ['new comment', 'other comment']});
+        const props = { comments: ['new comment', 'other comment']};
+        component = renderComponent(CommentList, null, props );
     });
 
     it('shows li for each comment', () => {
-
+        expect(component.find('li').length).to.equal(2);
     });
 
     it('shows each comment that is provided', () => {
